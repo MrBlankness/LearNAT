@@ -6,7 +6,7 @@ This is a reproduction of the paper **"LearNAT: Learning NL2SQL with AST-guided 
 
 LearNAT is a novel framework designed to enhance LLMs' task decomposition capabilities for NL2SQL tasks. It introduces:
 
-1. **Decomposition Synthesis Procedure**: Uses AST-guided MCTS to automatically generate verifiable SQL decompositions from BIRD/Spider training sets, driven by an LLM API (e.g. GPT-4o)
+1. **Decomposition Synthesis Procedure**: Uses AST-guided MCTS to automatically generate verifiable SQL decompositions from BIRD/Spider training sets, driven by an LLM API
 2. **Two-Stage Training**:
    - **Stage 1 – SFT**: Warm-up fine-tuning on successful decomposition trajectories
    - **Stage 2 – MDPO**: Margin-Aware DPO with AST similarity margin for fine-grained preference optimization
@@ -27,7 +27,7 @@ where `Δ_r = sim(y_w, y*) - sim(y_l, y*)` is the AST-based quality margin betwe
 LearNAT/
 ├── AST.py                 # SQL AST parsing, node classification, similarity
 ├── MCTS.py                # AST-guided Monte Carlo Tree Search
-├── data_generation.py     # Decomposition data synthesis (calls GPT-4o via API)
+├── data_generation.py     # Decomposition data synthesis (calls LLM via API)
 ├── trainers.py            # SFT and MDPO training logic (BasicTrainer / FSDPTrainer)
 ├── train.py               # Main training entry point (CLI)
 ├── LLM_inference.py       # Batch inference and execution-accuracy evaluation
@@ -37,7 +37,7 @@ LearNAT/
 │   └── config.yaml        # Default training hyperparameters
 ├── data/                  # Dataset directory (BIRD / Spider)
 ├── outputs/               # Generated data and model checkpoints
-│   ├── decomposition_data_v4/   # Pre-generated BIRD training data (27 SFT + 27 DPO)
+│   ├── decomposition_data/   # Pre-generated BIRD training data
 │   ├── sft_checkpoints/         # SFT model checkpoints
 │   └── mdpo_checkpoints/        # MDPO model checkpoints
 ├── scripts/               # Helper shell scripts
@@ -58,17 +58,13 @@ Step 1: Data Generation  →  Step 2: SFT Training  →  Step 3: MDPO Training  
 
 ```bash
 # Create and activate conda environment
-conda create -n nl2sql_reward python=3.10 -y
-conda activate nl2sql_reward
+conda create -n LearNAT python=3.10 -y
+conda activate LearNAT
 
 # Install all dependencies
 pip install -r requirements.txt
 ```
 
-> **Verified dependencies**: The following packages are required but may need explicit installation if `requirements.txt` is incomplete:
-> ```bash
-> pip install omegaconf wandb sqlparse func-timeout
-> ```
 
 ### Step 0.5: Download Datasets
 
@@ -100,7 +96,7 @@ data/
 
 ### Step 1: Data Generation (Decomposition Synthesis)
 
-Generate training data using MCTS with AST-guided search. This step calls **GPT-4o** (or another OpenAI-compatible API) to produce decomposition trajectories:
+Generate training data using MCTS with AST-guided search. This step calls **GLM** (or another OpenAI-compatible API) to produce decomposition trajectories:
 
 ```bash
 python data_generation.py \
@@ -366,92 +362,6 @@ L_MDPO = -E[ log σ( β·(log π_θ(y_w|x) - log π_ref(y_w|x))
 ```
 
 Compared to standard DPO, the margin `Δ_r` shifts the decision boundary proportionally to the AST quality gap between the chosen and rejected responses. When `--use_margin` is not set, `Δ_r = 0` and training reduces to standard DPO.
-
-## ⚙️ Configuration
-
-### Key Training Arguments
-
-| Argument | Default | Description |
-|----------|---------|-------------|
-| `--mode` | `sft` | Training mode: `sft` / `dpo` / `ipo` / `mdpo` |
-| `--model_name` | *(required)* | HuggingFace model name or local path |
-| `--data_path` | *(required)* | Path to `sft_data.json` or `dpo_data.json` |
-| `--max_length` | `2048` | Maximum input sequence length |
-| `--learning_rate` | `2e-5` | Learning rate for SFT |
-| `--dpo_learning_rate` | `2e-6` | Learning rate for DPO/MDPO |
-| `--batch_size` | `4` | Per-GPU batch size |
-| `--gradient_accumulation_steps` | `8` | Gradient accumulation steps |
-| `--num_epochs` | `3` | Training epochs |
-| `--warmup_ratio` | `0.1` | LR warmup ratio |
-| `--beta` | `0.2` | KL penalty coefficient for DPO |
-| `--label_smoothing` | `0.0` | DPO label smoothing |
-| `--use_margin` | `False` | Enable AST margin `Δ_r` in MDPO loss |
-| `--gradient_checkpointing` | `False` | Gradient checkpointing (saves GPU memory) |
-| `--use_fsdp` | `False` | Enable FSDP multi-GPU training |
-| `--output_dir` | `./outputs` | Checkpoint save directory |
-| `--log_every` | `10` | Log every N steps |
-| `--save_every` | `500` | Save checkpoint every N steps |
-| `--seed` | `42` | Random seed |
-
-Full defaults are in `config/config.yaml`.
-
-### TrainerConfig (Python API)
-
-```python
-from trainers import TrainerConfig, BasicTrainer
-
-config = TrainerConfig(
-    model_name_or_path="Qwen/Qwen2.5-Coder-7B-Instruct",
-    max_length=2048,
-    learning_rate=2e-5,
-    dpo_learning_rate=2e-6,
-    batch_size=2,
-    gradient_accumulation_steps=8,
-    num_epochs=3,
-    beta=0.2,        # KL penalty
-    use_margin=True  # Enable AST margin for MDPO
-)
-```
-
-### InferenceConfig (Python API)
-
-```python
-from LLM_inference import NL2SQLInference, InferenceConfig
-
-config = InferenceConfig(
-    model_path="./outputs/mdpo_checkpoints/final",
-    max_length=2048,
-    max_new_tokens=512,
-    temperature=0.1,   # only used when do_sample=True
-    top_p=0.95,        # only used when do_sample=True
-    do_sample=False,   # False = greedy decoding (recommended for eval)
-    device="cuda"
-)
-inference = NL2SQLInference(config)
-
-result = inference.generate(
-    question="Name movie titles released in 1945, sorted by popularity.",
-    schema={"movies": ["movie_id", "movie_title", "movie_release_year", "movie_popularity"]},
-    foreign_keys=[],
-    evidence="released in 1945 refers to movie_release_year = 1945"
-)
-print(result['sql'])           # Final SQL string
-print(result['decomposition']) # List of (description, sql) tuples
-print(result['raw_response'])  # Full model output
-```
-
-### MCTSConfig (Python API)
-
-```python
-from MCTS import MCTSConfig
-
-config = MCTSConfig(
-    max_depth=5,
-    simulations=50,
-    exploration_constant=1.41,
-    alpha=0.75,  # Weight for node-level similarity in margin calculation
-)
-```
 
 
 ## 🔗 References
