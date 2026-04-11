@@ -1,6 +1,6 @@
 # LearNAT: Learning NL2SQL with AST-guided Task Decomposition
 
-This is a reproduction of the paper **"LearNAT: Learning NL2SQL with AST-guided Task Decomposition for Large Language Models"** (ICLR 2026).
+This is an official repository of the paper **"LearNAT: Learning NL2SQL with AST-guided Task Decomposition for Large Language Models"** (ICLR 2026).
 
 ## 📖 Overview
 
