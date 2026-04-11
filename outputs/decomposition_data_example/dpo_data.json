@@ -1,0 +1,2227 @@
+[
+  {
+    "question": "Name movie titles released in year 1945. Sort the listing by the descending order of movie popularity.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "released in the year 1945 refers to movie_release_year = 1945;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve movie titles and their popularity for movies released in the year 1945",
+      "SELECT movie_title FROM movies where movie_release_year = 1945"
+    ],
+    "rejected": [
+      "Retrieve all movie titles and their popularity from the 'movies' table where the movies were released in the year 1945.",
+      "SELECT movie_title FROM movies where movie_release_year = 1945;"
+    ],
+    "margin": 0.7705833333333334
+  },
+  {
+    "question": "Name movie titles released in year 1945. Sort the listing by the descending order of movie popularity.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "released in the year 1945 refers to movie_release_year = 1945;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve movie titles and their popularity for movies released in the year 1945",
+      "SELECT movie_title FROM movies where movie_release_year = 1945"
+    ],
+    "rejected": [
+      "Retrieve all movie titles along with their release years from the movies table.",
+      "SELECT movie_title FROM movies;"
+    ],
+    "margin": 0.7705833333333334
+  },
+  {
+    "question": "Name movie titles released in year 1945. Sort the listing by the descending order of movie popularity.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "released in the year 1945 refers to movie_release_year = 1945;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve all movie titles and their popularity values from the movies table",
+      "SELECT movie_title FROM movies"
+    ],
+    "rejected": [
+      "Retrieve all movie titles and their popularity from the 'movies' table where the movies were released in the year 1945.",
+      "SELECT movie_title FROM movies where movie_release_year = 1945;"
+    ],
+    "margin": 0.3612916666666667
+  },
+  {
+    "question": "Name movie titles released in year 1945. Sort the listing by the descending order of movie popularity.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "released in the year 1945 refers to movie_release_year = 1945;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve all movie titles and their popularity values from the movies table",
+      "SELECT movie_title FROM movies"
+    ],
+    "rejected": [
+      "Retrieve all movie titles along with their release years from the movies table.",
+      "SELECT movie_title FROM movies;"
+    ],
+    "margin": 0.3612916666666667
+  },
+  {
+    "question": "Name movie titles released in year 1945. Sort the listing by the descending order of movie popularity.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "released in the year 1945 refers to movie_release_year = 1945;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve movie titles and their popularity for movies released in the year 1945",
+      "SELECT movie_title FROM movies where movie_release_year = 1945"
+    ],
+    "rejected": [
+      "Retrieve all movie titles and their popularity values from the movies table",
+      "SELECT movie_title FROM movies"
+    ],
+    "margin": 0.4092916666666667
+  },
+  {
+    "question": "What is the name of the longest movie title? When was it released?",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "longest movie title refers to MAX(LENGTH(movie_title)); when it was released refers to movie_release_year;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the movie titles along with their release years from the movies table.",
+      "select movie_title, movie_release_year from movies"
+    ],
+    "rejected": [
+      "Retrieve the movie title and the length of the movie titles from the movies table",
+      "select movie_title, length(movie_title) from movies"
+    ],
+    "margin": 0.3345092592592593
+  },
+  {
+    "question": "What is the user avatar url for user 41579158? What is the latest movie rated by him / her?",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user avatar url refers to user_avatar_image_url; latest movie rated refers to latest rating_date;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the user avatar URL and rating date for all ratings made by the user with ID 41579158",
+      "select ratings_users.user_avatar_image_url, ratings_users.rating_date_utc from ratings_users inner join ratings on ratings_users.user_id = ratings.user_id where ratings_users.user_id = 41579158"
+    ],
+    "rejected": [
+      "Retrieve the user avatar URL and the rating date for the user with user_id 41579158",
+      "select ratings_users.user_avatar_image_url, ratings_users.rating_date_utc from ratings_users where user_id = 41579158"
+    ],
+    "margin": 0.044539215686274516
+  },
+  {
+    "question": "What is the user avatar url for user 41579158? What is the latest movie rated by him / her?",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user avatar url refers to user_avatar_image_url; latest movie rated refers to latest rating_date;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the user avatar URL and rating date for all ratings made by the user with ID 41579158",
+      "select ratings_users.user_avatar_image_url, ratings_users.rating_date_utc from ratings_users inner join ratings on ratings_users.user_id = ratings.user_id where ratings_users.user_id = 41579158"
+    ],
+    "rejected": [
+      "Retrieve the user avatar URL for user 41579158.",
+      "select ratings_users.user_avatar_image_url from ratings_users where user_id = 41579158"
+    ],
+    "margin": 0.044539215686274516
+  },
+  {
+    "question": "What is the user avatar url for user 41579158? What is the latest movie rated by him / her?",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user avatar url refers to user_avatar_image_url; latest movie rated refers to latest rating_date;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the user avatar URL and rating date for all ratings made by the user with ID 41579158",
+      "select ratings_users.user_avatar_image_url, ratings_users.rating_date_utc from ratings_users inner join ratings on ratings_users.user_id = ratings.user_id where ratings_users.user_id = 41579158"
+    ],
+    "rejected": [
+      "Retrieve user avatar URL and rating details for user with id 41579158, sorted by rating date in descending order.",
+      "select ratings_users.user_avatar_image_url, ratings.rating_date_utc from ratings_users inner join ratings on ratings_users.user_id = ratings.user_id where ratings_users.user_id = 41579158 order by ratings.rating_date_utc desc"
+    ],
+    "margin": 0.044539215686274516
+  },
+  {
+    "question": "What is the user avatar url for user 41579158? What is the latest movie rated by him / her?",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user avatar url refers to user_avatar_image_url; latest movie rated refers to latest rating_date;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the user avatar URL and rating date for all ratings made by the user with ID 41579158",
+      "select ratings_users.user_avatar_image_url, ratings_users.rating_date_utc from ratings_users inner join ratings on ratings_users.user_id = ratings.user_id where ratings_users.user_id = 41579158"
+    ],
+    "rejected": [
+      "Retrieve user avatar image URL and rating date for ratings made by user 41579158",
+      "select ratings_users.user_avatar_image_url, ratings.rating_date_utc from ratings_users inner join ratings on ratings_users.user_id = ratings.user_id where ratings_users.user_id = 41579158"
+    ],
+    "margin": 0.044539215686274516
+  },
+  {
+    "question": "List ther users who gave the worst rating for movie 'Love Will Tear Us Apart'.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "worst rating refers to rating_score = 1;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the user IDs who gave a rating score of 1",
+      "select ratings.user_id from ratings where ratings.rating_score = 1"
+    ],
+    "rejected": [
+      "Retrieve the movie ID for the movie titled 'Love Will Tear Us Apart'",
+      "select movie_id from movies where movies.movie_title = 'love will tear us apart'"
+    ],
+    "margin": 0.6314130434782609
+  },
+  {
+    "question": "List ther users who gave the worst rating for movie 'Love Will Tear Us Apart'.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "worst rating refers to rating_score = 1;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the user IDs who gave a rating score of 1",
+      "select ratings.user_id from ratings where ratings.rating_score = 1"
+    ],
+    "rejected": [
+      "Retrieve the IDs of all ratings for the movie 'Love Will Tear Us Apart'.",
+      "select ratings.rating_id from ratings inner join movies on ratings.movie_id = movies.movie_id where movies.movie_title = 'love will tear us apart'"
+    ],
+    "margin": 0.6314130434782609
+  },
+  {
+    "question": "For all movies where users left a critic, find the movie name, user, rating and critics comments from the user.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "movies where users left a critic refers to critic IS NOT NULL; critic comments refers to critic;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the movie titles, user IDs, rating scores, and critic comments for movies where users left a critic comment (i.e., critic is not null).",
+      "select movies.movie_title, ratings.user_id, ratings.rating_score, ratings.critic from ratings inner join movies on ratings.movie_id = movies.movie_id where ratings.critic is not null"
+    ],
+    "rejected": [
+      "Retrieve all movies where users left a critic.",
+      "select movies.movie_title, ratings.movie_id from ratings inner join movies on ratings.movie_id = movies.movie_id where ratings.critic is not null"
+    ],
+    "margin": 0.9625
+  },
+  {
+    "question": "For all movies where users left a critic, find the movie name, user, rating and critics comments from the user.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "movies where users left a critic refers to critic IS NOT NULL; critic comments refers to critic;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the movie titles, user IDs, rating scores, and critic comments for movies where users left a critic comment (i.e., critic is not null).",
+      "select movies.movie_title, ratings.user_id, ratings.rating_score, ratings.critic from ratings inner join movies on ratings.movie_id = movies.movie_id where ratings.critic is not null"
+    ],
+    "rejected": [
+      "Retrieve all movies where users left a critic.",
+      "select movies.movie_id, movies.movie_title from movies inner join ratings on movies.movie_id = ratings.movie_id where ratings.critic is not null"
+    ],
+    "margin": 0.9625
+  },
+  {
+    "question": "For all movies where users left a critic, find the movie name, user, rating and critics comments from the user.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "movies where users left a critic refers to critic IS NOT NULL; critic comments refers to critic;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the movie titles, user IDs, rating scores, and critic comments for movies where users left a critic comment (i.e., critic is not null).",
+      "select movies.movie_title, ratings.user_id, ratings.rating_score, ratings.critic from ratings inner join movies on ratings.movie_id = movies.movie_id where ratings.critic is not null"
+    ],
+    "rejected": [
+      "Retrieve all movie IDs and their associated critic comments where users left a critic.",
+      "select movie_id, ratings.critic from ratings where ratings.critic is not null"
+    ],
+    "margin": 0.9625
+  },
+  {
+    "question": "For all movies where users left a critic, find the movie name, user, rating and critics comments from the user.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "movies where users left a critic refers to critic IS NOT NULL; critic comments refers to critic;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the movie titles, user IDs, rating scores, and critic comments for movies where users left a critic comment (i.e., critic is not null).",
+      "select movies.movie_title, ratings.user_id, ratings.rating_score, ratings.critic from ratings inner join movies on ratings.movie_id = movies.movie_id where ratings.critic is not null"
+    ],
+    "rejected": [
+      "Retrieve details of all ratings where the critic field is not null",
+      "select movie_id, ratings.user_id, ratings.rating_score, ratings.critic from ratings where ratings.critic is not null"
+    ],
+    "margin": 0.9625
+  },
+  {
+    "question": "What is the name of the most followed list?",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "most followed list refers to MAX(list_followers);",
+    "previous_steps": [
+      [
+        "Retrieve the titles and the number of followers of all lists.",
+        "SELECT list_title FROM lists"
+      ]
+    ],
+    "chosen": [
+      "Retrieve the titles and the number of followers of all lists, and order them by the number of followers in descending order",
+      "SELECT list_title FROM lists order by list_followers desc"
+    ],
+    "rejected": [
+      "Retrieve the titles and the number of followers of all lists.",
+      "SELECT list_title FROM lists"
+    ],
+    "margin": 0.18118055555555557
+  },
+  {
+    "question": "What is the user ID of the user, who was a subscriber when he created the list, who created a list for 10 consecutive years? If there are multiple users, indicate each of their user IDs.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user was a subscriber when he created the list refers to user_subscriber = 1; user who created a list for 10 consecutive years refers to user_id with list_creation_date_utc for 10 succeeding years;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve all user IDs along with their list creation dates and subscription status.",
+      "SELECT user_id FROM lists_users"
+    ],
+    "rejected": [
+      "Retrieve the user IDs and the years when lists were created by users who were subscribers at the time they created the list.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1"
+    ],
+    "margin": 0.30208371594735234
+  },
+  {
+    "question": "What is the user ID of the user, who was a subscriber when he created the list, who created a list for 10 consecutive years? If there are multiple users, indicate each of their user IDs.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user was a subscriber when he created the list refers to user_subscriber = 1; user who created a list for 10 consecutive years refers to user_id with list_creation_date_utc for 10 succeeding years;",
+    "previous_steps": [
+      [
+        "Retrieve the user IDs and the years when lists were created by users who were subscribers at the time they created the list.",
+        "SELECT user_id FROM lists_users where user_subscriber = 1"
+      ]
+    ],
+    "chosen": [
+      "Group the retrieved user IDs by user_id and validate that there are at least 10 distinct years in which lists were created.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1 group by user_id"
+    ],
+    "rejected": [
+      "Retrieve the user IDs and the creation years of the lists created by users who were subscribers at the time they created the list, excluding duplicate entries for the same user in the same year.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1 group by user_id, substr(list_creation_date_utc, 1, 4)"
+    ],
+    "margin": 0.4892575757575759
+  },
+  {
+    "question": "What is the user ID of the user, who was a subscriber when he created the list, who created a list for 10 consecutive years? If there are multiple users, indicate each of their user IDs.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user was a subscriber when he created the list refers to user_subscriber = 1; user who created a list for 10 consecutive years refers to user_id with list_creation_date_utc for 10 succeeding years;",
+    "previous_steps": [
+      [
+        "Retrieve the user IDs and the years when lists were created by users who were subscribers at the time they created the list.",
+        "SELECT user_id FROM lists_users where user_subscriber = 1"
+      ]
+    ],
+    "chosen": [
+      "Group the retrieved user IDs by user_id and validate that there are at least 10 distinct years in which lists were created.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1 group by user_id"
+    ],
+    "rejected": [
+      "Group the lists by user_id and filter those users who have created lists in 10 or more different years.",
+      "select user_id from lists_users where user_subscriber = 1 group by user_id having count(distinct substr(list_creation_date_utc, 1, 4)) >= 10"
+    ],
+    "margin": 0.4892575757575759
+  },
+  {
+    "question": "What is the user ID of the user, who was a subscriber when he created the list, who created a list for 10 consecutive years? If there are multiple users, indicate each of their user IDs.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user was a subscriber when he created the list refers to user_subscriber = 1; user who created a list for 10 consecutive years refers to user_id with list_creation_date_utc for 10 succeeding years;",
+    "previous_steps": [
+      [
+        "Retrieve the user IDs and the years when lists were created by users who were subscribers at the time they created the list.",
+        "SELECT user_id FROM lists_users where user_subscriber = 1"
+      ]
+    ],
+    "chosen": [
+      "Group the retrieved user IDs by user_id and validate that there are at least 10 distinct years in which lists were created.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1 group by user_id"
+    ],
+    "rejected": [
+      "Retrieve the user IDs and the creation years of the lists created by users who were subscribers at the time of list creation, grouping by user ID and year of list creation.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1 group by user_id, creation_year"
+    ],
+    "margin": 0.4892575757575759
+  },
+  {
+    "question": "What is the user ID of the user, who was a subscriber when he created the list, who created a list for 10 consecutive years? If there are multiple users, indicate each of their user IDs.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user was a subscriber when he created the list refers to user_subscriber = 1; user who created a list for 10 consecutive years refers to user_id with list_creation_date_utc for 10 succeeding years;",
+    "previous_steps": [
+      [
+        "Retrieve all user IDs along with their list creation dates and subscription status.",
+        "SELECT user_id FROM lists_users"
+      ],
+      [
+        "Retrieve all user IDs along with their list creation dates where the user was a subscriber when they created the list.",
+        "SELECT user_id FROM lists_users where user_subscriber = 1"
+      ]
+    ],
+    "chosen": [
+      "Group the user IDs by the list creation year and count the number of unique years each user has created a list when they were a subscriber.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1 group by user_id"
+    ],
+    "rejected": [
+      "Retrieve distinct user IDs from the lists_users where the user was a subscriber when they created the list.",
+      "select distinct user_id from lists_users where user_subscriber = 1"
+    ],
+    "margin": 0.7688333333333335
+  },
+  {
+    "question": "What is the user ID of the user, who was a subscriber when he created the list, who created a list for 10 consecutive years? If there are multiple users, indicate each of their user IDs.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "user was a subscriber when he created the list refers to user_subscriber = 1; user who created a list for 10 consecutive years refers to user_id with list_creation_date_utc for 10 succeeding years;",
+    "previous_steps": [
+      [
+        "Retrieve all user IDs along with their list creation dates and subscription status.",
+        "SELECT user_id FROM lists_users"
+      ],
+      [
+        "Retrieve all user IDs along with their list creation dates where the user was a subscriber when they created the list.",
+        "SELECT user_id FROM lists_users where user_subscriber = 1"
+      ]
+    ],
+    "chosen": [
+      "Group the user IDs by the list creation year and count the number of unique years each user has created a list when they were a subscriber.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1 group by user_id"
+    ],
+    "rejected": [
+      "Retrieve user IDs and the years of their list creation dates where the user was a subscriber when they created the list.",
+      "SELECT user_id FROM lists_users where user_subscriber = 1"
+    ],
+    "margin": 0.055055555555555746
+  },
+  {
+    "question": "How many movies were added to the list with the most number of movies? Indicate whether the user was a paying subscriber or not when he created the list.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "list with the most number of movies refers to MAX(list_movie_number); user_has_payment_method = 1 means the user was a paying subscriber when he created the list; user_has_payment_method = 0 means the user was not a paying subscriber when he created the list;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the number of movies for all lists and the user's payment method when the lists were created.",
+      "select lists.list_movie_number, lists_users.user_has_payment_method from lists inner join lists_users on lists.list_id = lists_users.list_id"
+    ],
+    "rejected": [
+      "Retrieve the list IDs and list_movie_numbers of all lists.",
+      "select list_id, lists.list_movie_number from lists"
+    ],
+    "margin": 0.7664264705882353
+  },
+  {
+    "question": "How many movies were added to the list with the most number of movies? Indicate whether the user was a paying subscriber or not when he created the list.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "list with the most number of movies refers to MAX(list_movie_number); user_has_payment_method = 1 means the user was a paying subscriber when he created the list; user_has_payment_method = 0 means the user was not a paying subscriber when he created the list;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the number of movies for all lists and the user's payment method when the lists were created.",
+      "select lists.list_movie_number, lists_users.user_has_payment_method from lists inner join lists_users on lists.list_id = lists_users.list_id"
+    ],
+    "rejected": [
+      "Retrieve the number of movies in each list and the corresponding user IDs who created these lists.",
+      "select lists.list_movie_number, user_id from lists"
+    ],
+    "margin": 0.7664264705882353
+  },
+  {
+    "question": "How many movies were added to the list with the most number of movies? Indicate whether the user was a paying subscriber or not when he created the list.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "list with the most number of movies refers to MAX(list_movie_number); user_has_payment_method = 1 means the user was a paying subscriber when he created the list; user_has_payment_method = 0 means the user was not a paying subscriber when he created the list;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the number of movies for all lists and the user's payment method when the lists were created.",
+      "select lists.list_movie_number, lists_users.user_has_payment_method from lists inner join lists_users on lists.list_id = lists_users.list_id"
+    ],
+    "rejected": [
+      "Retrieve the list_id of the list with the most number of movies.",
+      "select list_id from lists order by lists.list_movie_number desc limit 1"
+    ],
+    "margin": 0.7664264705882353
+  },
+  {
+    "question": "How many movies were added to the list with the most number of movies? Indicate whether the user was a paying subscriber or not when he created the list.",
+    "schema": {
+      "lists": [
+        "`user_id`",
+        "`list_id`",
+        "`list_title`",
+        "`list_movie_number`",
+        "`list_update_timestamp_utc`",
+        "`list_creation_timestamp_utc`",
+        "`list_followers`",
+        "`list_url`",
+        "`list_comments`",
+        "`list_description`",
+        "`list_cover_image_url`",
+        "`list_first_image_url`",
+        "`list_second_image_url`",
+        "`list_third_image_url`"
+      ],
+      "movies": [
+        "`movie_id`",
+        "`movie_title`",
+        "`movie_release_year`",
+        "`movie_url`",
+        "`movie_title_language`",
+        "`movie_popularity`",
+        "`movie_image_url`",
+        "`director_id`",
+        "`director_name`",
+        "`director_url`"
+      ],
+      "ratings_users": [
+        "`user_id`",
+        "`rating_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "lists_users": [
+        "`user_id`",
+        "`list_id`",
+        "`list_update_date_utc`",
+        "`list_creation_date_utc`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_avatar_image_url`",
+        "`user_cover_image_url`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ],
+      "ratings": [
+        "`movie_id`",
+        "`rating_id`",
+        "`rating_url`",
+        "`rating_score`",
+        "`rating_timestamp_utc`",
+        "`critic`",
+        "`critic_likes`",
+        "`critic_comments`",
+        "`user_id`",
+        "`user_trialist`",
+        "`user_subscriber`",
+        "`user_eligible_for_trial`",
+        "`user_has_payment_method`"
+      ]
+    },
+    "evidence": "list with the most number of movies refers to MAX(list_movie_number); user_has_payment_method = 1 means the user was a paying subscriber when he created the list; user_has_payment_method = 0 means the user was not a paying subscriber when he created the list;",
+    "previous_steps": [],
+    "chosen": [
+      "Retrieve the number of movies for all lists and the user's payment method when the lists were created.",
+      "select lists.list_movie_number, lists_users.user_has_payment_method from lists inner join lists_users on lists.list_id = lists_users.list_id"
+    ],
+    "rejected": [
+      "Retrieve the list ID and number of movies for each list, ordered by the number of movies in descending order.",
+      "select list_id, lists.list_movie_number from lists order by lists.list_movie_number desc"
+    ],
+    "margin": 0.7664264705882353
+  }
+]

@@ -1,0 +1,36 @@
+# LearNAT: Learning NL2SQL with AST-guided Task Decomposition
+# Requirements file for code reproduction
+
+# Core ML Libraries
+torch>=2.0.0
+transformers>=4.35.0
+datasets>=2.14.0
+accelerate>=0.24.0
+
+# SQL Parsing
+sqlparse>=0.4.4
+
+# API Clients
+zhipuai>=2.0.0
+openai>=1.0.0
+
+# Distributed Training
+tensor-parallel>=1.2.4
+
+# Configuration Management
+hydra-core>=1.3.2
+omegaconf>=2.3.0
+
+# Experiment Tracking
+wandb>=0.15.0
+
+# Utilities
+numpy>=1.24.0
+pandas>=2.0.0
+tqdm>=4.65.0
+func-timeout>=4.3.5
+jsonlines>=3.1.0
+
+# Development
+ipykernel>=6.23.0
+beautifulsoup4>=4.12.0
